@@ -1,4 +1,4 @@
-# 💻: BMVC 2022 : Resolving Semantic Confusions for Improved Zero-Shot Detection
+# :computer: BMVC 2022 : Resolving Semantic Confusions for Improved Zero-Shot Detection
 
 ##  :eyeglasses: At a glance
 This repository contains the official PyTorch implementation of our [BMVC 2022](www.bmvc2022.org) paper : Resolving Semantic Confusions for Improved Zero-Shot Detection, a work done by Sandipan Sarma, Sushil Kumar and Arijit Sur at [Indian Institute of Technology Guwahati](https://www.iitg.ac.in/cse/). 
@@ -26,9 +26,37 @@ This repository contains the official PyTorch implementation of our [BMVC 2022](
 
 # :bullettrain_side: Training the model
 
-## 1. Creating the work environment
+## 1. :office: Creating the work environment
 Our code is based on PyTorch and has been implemented using an NVIDIA DGX Station, with [mmdetection](https://github.com/open-mmlab/mmdetection) as the base framework for object detection, which contains a Faster-RCNN implementation. Install Anaconda/Miniconda on your system and create a conda environment using the following command:
 
 ```bash
 conda env create -f zsd_environment.yml
 ```
+
+Once set up, activate the environment and do the following:
+```bash
+cd ./mmdetection/
+
+# install mmdetection and bind it to your project
+python setup.py develop
+```
+
+Following commands are being shown for MSCOCO dataset. For PASCAL-VOC dataset, make the appropriate changes to the command line arguments and run the appropriate scripts.
+
+## 2. Train Faster-RCNN detector on *seen* data
+All the configurations regarding training and testing pipelines are stored in a configuration file. To access it and make changes in it, find the file using:
+
+```bash
+cd ./mmdetection/configs/faster_rcnn_r101_fpn_1x.py
+```
+
+In zero-shot detection, the object categories in a dataset are split into two sets - *seen* and *unseen*. Such sets are defined in previous works for both MSCOCO [[1]](#1) and PASCAL-VOC [[2]](#2) datasets 
+
+## References
+<a id="1">[1]</a> 
+Shafin Rahman, Salman Khan, and Nick Barnes. Polarity loss for zero-shot object
+detection. arXiv preprint arXiv:1811.08982, 2018.
+
+<a id="2">[2]</a> 
+Berkan Demirel, Ramazan Gokberk Cinbis, and Nazli Ikizler-Cinbis. Zero-shot object
+detection by hybrid region embedding. In BMVC, 2018.
