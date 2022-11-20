@@ -55,26 +55,45 @@ In zero-shot detection, the object categories in a dataset are split into two se
 To train the Faster-RCNN on seen data, run:
 ```bash
 cd ./mmdetection
-./tools/dist_train.sh configs/faster_rcnn_r101_fpn_1x.py <num_gpus> --validate 
+./tools/dist_train.sh configs/faster_rcnn_r101_fpn_1x.py 1 --validate 
 ```
+For reproducibility, it is recommended to use the pre-trained model given below in this repository. It is important to create a directory named ```work_dirs``` inside ```mmdetection``` folder, where there should be separate directories for MSCOCO and PASCAL-VOC, inside which the weights of the trained Faster-RCNN should be stored. For our pre-trained models, we name them as ```epoch_12.pth``` and ```epoch_4.pth``` after training Faster-RCNN on seen data of MSCOCO and PASCAL-VOC datasets respectively.
+
+The pre-trained weights of Faster-RCNN are stored with the ResNet-101 (backbone CNN) being pre-trained only after removing the overlapping classes from ImageNet [[3]](#3). This pre-trained ResNet is given [here](). 
 
 ## 3. :outbox_tray: Extract object features 
 During training, we arrange the dataset such that the available images do not contain any object-instance of an *unseen* class. Hence, extract object features for only the object instances belonging to *seen* categories:
 ```bash
-code
+cd ./mmdetection
+python tools/zero_shot_utils.py configs/faster_rcnn_r101_fpn_1x.py --classes seen --load_from ./work_dirs/coco2014/epoch_12.pth --save_dir ./data --data_split train
 ```
+Inside the ```data``` folder, MSCOCO and PASCAL-VOC datasets should be stored in appropriate formats. 
 
 ## 4. Training a visual-semantic mapper
 Train a visual-semantic mapper using the *seen* data to learn a function mapping visual-space to semantic space. This trained mapper would be used in the next step while computing cyclic-consistency loss, improving feature-synthesis quality of GAN. Run:
 ```
+python train_regressor.py 
+```
+Weights will be saved in the appropriate paths. For VOC, run ```train_regressor_voc.py```
+
 
 ## 4. :factory: Train the generative model using extracted features
-Extracted seen-class object features constitute the *real data distribution*, using which a **Conditional Wasserstein GAN** is trained, with class-semantics of seen/unseen classes acting as the *conditional variables*. During GAN training, triplet loss is computed based on the synthesized object features, enforcing inter-class dissimilarity learning. Moreover, a cyclic-consistency between the synthesized features and their class semantics is computed, encourgaing the GAN to generate visual features that correspond well to their own semantics. For training the GAN, run:
+Extracted seen-class object features constitute the *real data distribution*, using which a **Conditional Wasserstein GAN** is trained, with class-semantics of seen/unseen classes acting as the *conditional variables*. During GAN training, triplet loss is computed based on the synthesized object features, enforcing inter-class dissimilarity learning. Moreover, a cyclic-consistency between the synthesized features and their class semantics is computed, encourgaing the GAN to generate visual features that correspond well to their own semantics. For training the GAN, run the script:
 ```bash
-code
+./script/train_coco_generator_65_15.sh
 ```
 
-## 5. Evaluation
+## 5. :mag: Evaluation
+```bash
+cd mmdetection
+
+#evaluation on zsd
+./tools/dist_test.sh configs/faster_rcnn_r101_fpn_1x.py ./work_dirs/coco2014/epoch_12.pth 1 --dataset coco --out /workspace/arijit_ug/sushil/zsd/checkpoints/ab_st_final/coco_65_15_wgan_modeSeek_seen_cycSeenUnseen_tripletSeenUnseen_varMargin_try6/coco_65_15_wgan_modeSeek_seen_cycSeenUnseen_tripletSeenUnseen_varMargin_try6_zsd_result.pkl --zsd --syn_weights /workspace/arijit_ug/sushil/zsd/checkpoints/ab_st_final/coco_65_15_wgan_modeSeek_seen_cycSeenUnseen_tripletSeenUnseen_varMargin_try6/classifier_best_latest.pth
+```
+
+**NOTE:** Change ```--zsd``` flag to ```---gzsd``` for evaluation in the **generalized ZSD setting**. Change directory names accordingly.
+
+
 
 
 # :scroll: References
@@ -85,3 +104,6 @@ detection. arXiv preprint arXiv:1811.08982, 2018.
 <a id="2">[2]</a> 
 Berkan Demirel, Ramazan Gokberk Cinbis, and Nazli Ikizler-Cinbis. Zero-shot object
 detection by hybrid region embedding. In BMVC, 2018.
+
+<a id="3">[3]</a> 
+Yongqin Xian, Christoph H Lampert, Bernt Schiele, and Zeynep Akata. Zero-shot learning—a comprehensive evaluation of the good, the bad and the ugly. IEEE transactions on pattern analysis and machine intelligence, 41(9):2251–2265, 2018.
