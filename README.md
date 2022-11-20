@@ -16,13 +16,12 @@ This repository contains the official PyTorch implementation of our [BMVC 2022](
 
 - **Addressed problems** such as high false positive rate and misclassification of localized objects by resolving semantic confusion, and **comprehensively beat the state-of-the-art methods**.
 
-<!---
+
 <p align="center">
-  <img alt="img-name" src="https://user-images.githubusercontent.com/14089338/184326334-d80e51f9-a907-49f9-876f-c2ecd4844834.png" width="700">
+  <img alt="method" src="https://user-images.githubusercontent.com/30040548/202925042-8dc9f465-df7d-4303-95a9-24661915f69b.png" width="700">
   <br>
-    <em>InvPT enables jointly learning and inference of global spatial interaction and simultaneous all-task interaction, which is critically important for multi-task dense prediction.</em>
+    <em>The primary novelty of our model lies in the incorporation of triplet loss based on visual features, assisted by a cyclic-consistency loss</em>
 </p>
--->
 
 # :bullettrain_side: Training the model
 
@@ -59,17 +58,17 @@ cd ./mmdetection
 ```
 For reproducibility, it is recommended to use the pre-trained model given below in this repository. It is important to create a directory named ```work_dirs``` inside ```mmdetection``` folder, where there should be separate directories for MSCOCO and PASCAL-VOC, inside which the weights of the trained Faster-RCNN should be stored. For our pre-trained models, we name them as ```epoch_12.pth``` and ```epoch_4.pth``` after training Faster-RCNN on seen data of MSCOCO and PASCAL-VOC datasets respectively.
 
-The pre-trained weights of Faster-RCNN are stored with the ResNet-101 (backbone CNN) being pre-trained only after removing the overlapping classes from ImageNet [[3]](#3). This pre-trained ResNet is given [here](). 
+The pre-trained weights of Faster-RCNN are stored with the ResNet-101 (backbone CNN) being pre-trained only after removing the overlapping classes from ImageNet [[3]](#3). This pre-trained ResNet is given [here](https://drive.google.com/file/d/1wAgWbceKwS6c_zjZ3KzkDm7SNoKQOynJ/view?usp=share_link). 
 
 ## 3. :outbox_tray: Extract object features 
-During training, we arrange the dataset such that the available images do not contain any object-instance of an *unseen* class. Hence, extract object features for only the object instances belonging to *seen* categories:
+Inside the ```data``` folder, MSCOCO and PASCAL-VOC image datasets should be stored in appropriate formats, before running the following:
+
 ```bash
 cd ./mmdetection
 python tools/zero_shot_utils.py configs/faster_rcnn_r101_fpn_1x.py --classes seen --load_from ./work_dirs/coco2014/epoch_12.pth --save_dir ./data --data_split train
 ```
-Inside the ```data``` folder, MSCOCO and PASCAL-VOC datasets should be stored in appropriate formats. 
 
-## 4. Training a visual-semantic mapper
+## 4. :left_right_arrow: Training a visual-semantic mapper
 Train a visual-semantic mapper using the *seen* data to learn a function mapping visual-space to semantic space. This trained mapper would be used in the next step while computing cyclic-consistency loss, improving feature-synthesis quality of GAN. Run:
 ```
 python train_regressor.py 
