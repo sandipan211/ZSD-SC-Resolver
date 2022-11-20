@@ -54,13 +54,18 @@ In zero-shot detection, the object categories in a dataset are split into two se
 
 To train the Faster-RCNN on seen data, run:
 ```bash
-code
+cd ./mmdetection
+./tools/dist_train.sh configs/faster_rcnn_r101_fpn_1x.py <num_gpus> --validate 
 ```
 
 ## 3. :outbox_tray: Extract object features 
 During training, we arrange the dataset such that the available images do not contain any object-instance of an *unseen* class. Hence, extract object features for only the object instances belonging to *seen* categories:
 ```bash
 code
+```
+
+## 4. Training a visual-semantic mapper
+Train a visual-semantic mapper using the *seen* data to learn a function mapping visual-space to semantic space. This trained mapper would be used in the next step while computing cyclic-consistency loss, improving feature-synthesis quality of GAN. Run:
 ```
 
 ## 4. :factory: Train the generative model using extracted features
