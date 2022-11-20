@@ -1,0 +1,56 @@
+/workspace/arijit_ug/sushil/zsd
+Sun May 15 01:50:43 2022       
++-----------------------------------------------------------------------------+
+| NVIDIA-SMI 450.119.04   Driver Version: 450.119.04   CUDA Version: 11.0     |
+|-------------------------------+----------------------+----------------------+
+| GPU  Name        Persistence-M| Bus-Id        Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp  Perf  Pwr:Usage/Cap|         Memory-Usage | GPU-Util  Compute M. |
+|                               |                      |               MIG M. |
+|===============================+======================+======================|
+|   0  Tesla V100-DGXS...  On   | 00000000:07:00.0 Off |                    0 |
+| N/A   58C    P0    81W / 300W |   2696MiB / 32508MiB |      4%      Default |
+|                               |                      |                  N/A |
++-------------------------------+----------------------+----------------------+
+                                                                               
++-----------------------------------------------------------------------------+
+| Processes:                                                                  |
+|  GPU   GI   CI        PID   Type   Process name                  GPU Memory |
+|        ID   ID                                                   Usage      |
+|=============================================================================|
++-----------------------------------------------------------------------------+
+GPU 0: Tesla V100-DGXS-32GB (UUID: GPU-8b3b48f6-812a-663d-464a-0cc5ae461981)
+training regressor in process......
+(347688, 1024)
+network structure :
+ Regressor(
+  (fc1): Linear(in_features=1024, out_features=300, bias=True)
+)
+saved 56808.0844
+saved 33580.4476
+saved 21942.3441
+saved 14832.9345
+saved 10137.3763
+saved 6925.0557
+saved 4693.7932
+saved 3140.1370
+saved 2065.3986
+saved 1330.1017
+saved 837.4425
+saved 513.9310
+saved 307.2938
+saved 178.7231
+saved 101.7256
+saved 57.3973
+saved 33.0817
+saved 20.6564
+saved 14.4609
+saved 11.3881
+saved 10.2562
+saved 9.9225
+saved 9.8330
+saved 9.5489
+saved 9.3359
+saved 9.2670
+Finished Training
+
+trained for 100_epoch
