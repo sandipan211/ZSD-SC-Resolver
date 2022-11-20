@@ -1,0 +1,39 @@
+2021-10-25 16:25:42,892 - INFO - ######################  config: configs/faster_rcnn_r101_fpn_1x.py
+2021-10-25 16:25:42,892 - INFO - ######################  checkpoint: ./work_dirs/coco2014/epoch_12.pth
+2021-10-25 16:25:42,892 - INFO - ######################  syn_weights: ../checkpoints/coco_65_15_3loss_incl_cyc_loss/classifier_best_latest.pth
+2021-10-25 16:25:42,892 - INFO - ######################  out: coco_results_zsd_3loss_inc_cyc_loss.pkl
+2021-10-25 16:25:42,892 - INFO - ######################  zsd: True
+2021-10-25 16:25:42,892 - INFO - ######################  gzsd: False
+2021-10-25 16:25:42,892 - INFO - ######################  dataset: coco
+2021-10-25 16:25:42,892 - INFO - ######################  json_out: None
+2021-10-25 16:25:42,892 - INFO - ######################  eval: None
+2021-10-25 16:25:42,893 - INFO - ######################  show: False
+2021-10-25 16:25:42,893 - INFO - ######################  tmpdir: None
+2021-10-25 16:25:42,893 - INFO - ######################  launcher: pytorch
+2021-10-25 16:25:42,893 - INFO - ######################  local_rank: 0
+loading annotations into memory...
+Done (t=6.56s)
+creating index...
+index created!
+total training samples 10098 ....
+2021-10-25 16:25:58,823 - INFO - 65_15
+Traceback (most recent call last):
+  File "./tools/test.py", line 263, in <module>
+    main()
+  File "./tools/test.py", line 238, in main
+    seen_bg_weight, seen_bg_bias = copy_synthesised_weights(model, args.syn_weights, dataset_name, split=cfg.data.test.split)
+  File "/workspace/arijit_ug/sushil/zsd/mmdetection/mmdet/apis/runner.py", line 15, in copy_synthesised_weights
+    checkpoint = torch.load(filename, map_location='cpu')
+  File "/workspace/arijit_ug/miniconda3/envs/nas/lib/python3.7/site-packages/torch/serialization.py", line 382, in load
+    f = open(f, 'rb')
+FileNotFoundError: [Errno 2] No such file or directory: '../checkpoints/coco_65_15_3loss_incl_cyc_loss/classifier_best_latest.pth'
+Traceback (most recent call last):
+  File "/workspace/arijit_ug/miniconda3/envs/nas/lib/python3.7/runpy.py", line 193, in _run_module_as_main
+    "__main__", mod_spec)
+  File "/workspace/arijit_ug/miniconda3/envs/nas/lib/python3.7/runpy.py", line 85, in _run_code
+    exec(code, run_globals)
+  File "/workspace/arijit_ug/miniconda3/envs/nas/lib/python3.7/site-packages/torch/distributed/launch.py", line 235, in <module>
+    main()
+  File "/workspace/arijit_ug/miniconda3/envs/nas/lib/python3.7/site-packages/torch/distributed/launch.py", line 231, in main
+    cmd=process.args)
+subprocess.CalledProcessError: Command '['/workspace/arijit_ug/miniconda3/envs/nas/bin/python', '-u', './tools/test.py', '--local_rank=0', 'configs/faster_rcnn_r101_fpn_1x.py', './work_dirs/coco2014/epoch_12.pth', '--launcher', 'pytorch', '--dataset', 'coco', '--out', 'coco_results_zsd_3loss_inc_cyc_loss.pkl', '--zsd', '--syn_weights', '../checkpoints/coco_65_15_3loss_incl_cyc_loss/classifier_best_latest.pth']' returned non-zero exit status 1.
