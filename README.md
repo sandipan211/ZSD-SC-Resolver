@@ -43,16 +43,36 @@ python setup.py develop
 
 Following commands are being shown for MSCOCO dataset. For PASCAL-VOC dataset, make the appropriate changes to the command line arguments and run the appropriate scripts.
 
-## 2. Train Faster-RCNN detector on *seen* data
+## 2. :hourglass_flowing_sand: Train Faster-RCNN detector on *seen* data
 All the configurations regarding training and testing pipelines are stored in a configuration file. To access it and make changes in it, find the file using:
 
 ```bash
 cd ./mmdetection/configs/faster_rcnn_r101_fpn_1x.py
 ```
 
-In zero-shot detection, the object categories in a dataset are split into two sets - *seen* and *unseen*. Such sets are defined in previous works for both MSCOCO [[1]](#1) and PASCAL-VOC [[2]](#2) datasets 
+In zero-shot detection, the object categories in a dataset are split into two sets - *seen* and *unseen*. Such sets are defined in previous works for both MSCOCO [[1]](#1) and PASCAL-VOC [[2]](#2) datasets. The splits can be found in ```splits.py```.
 
-## References
+To train the Faster-RCNN on seen data, run:
+```bash
+code
+```
+
+## 3. :outbox_tray: Extract object features 
+During training, we arrange the dataset such that the available images do not contain any object-instance of an *unseen* class. Hence, extract object features for only the object instances belonging to *seen* categories:
+```bash
+code
+```
+
+## 4. :factory: Train the generative model using extracted features
+Extracted seen-class object features constitute the *real data distribution*, using which a **Conditional Wasserstein GAN** is trained, with class-semantics of seen/unseen classes acting as the *conditional variables*. During GAN training, triplet loss is computed based on the synthesized object features, enforcing inter-class dissimilarity learning. Moreover, a cyclic-consistency between the synthesized features and their class semantics is computed, encourgaing the GAN to generate visual features that correspond well to their own semantics. For training the GAN, run:
+```bash
+code
+```
+
+## 5. Evaluation
+
+
+# :scroll: References
 <a id="1">[1]</a> 
 Shafin Rahman, Salman Khan, and Nick Barnes. Polarity loss for zero-shot object
 detection. arXiv preprint arXiv:1811.08982, 2018.
