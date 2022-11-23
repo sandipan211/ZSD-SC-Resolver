@@ -58,7 +58,7 @@ cd ./mmdetection
 ```
 For reproducibility, it is recommended to use the pre-trained model given below in this repository. It is important to create a directory named ```work_dirs``` inside ```mmdetection``` folder, where there should be separate directories for MSCOCO and PASCAL-VOC, inside which the weights of the trained Faster-RCNN should be stored. For our pre-trained models, we name them as ```epoch_12.pth``` and ```epoch_4.pth``` after training Faster-RCNN on seen data of MSCOCO and PASCAL-VOC datasets respectively.
 
-The pre-trained weights of Faster-RCNN are stored with the ResNet-101 (backbone CNN) being pre-trained only after removing the overlapping classes from ImageNet [[3]](#3). This pre-trained ResNet is given [here](https://drive.google.com/file/d/1wAgWbceKwS6c_zjZ3KzkDm7SNoKQOynJ/view?usp=share_link). 
+The pre-trained weights of Faster-RCNN are stored with the ResNet-101 (backbone CNN) being pre-trained only after removing the overlapping classes from ImageNet [[3]](#3). This pre-trained ResNet is given [here](https://drive.google.com/file/d/1wAgWbceKwS6c_zjZ3KzkDm7SNoKQOynJ/view?usp=share_link), and weights of Faster-RCNN are uploaded both for [PASCAL-VOC](https://mega.nz/file/rIc2Qawa#kjZjqHYtIX6RTpIy9vmxIPZzeU-6v5Rw7Ea6NRylTnU) and [MSCOCO](https://mega.nz/file/TZ81kSpA#LX97kMk0SlOQE2FwBymr1kk1pRPZxzxVwrxDzLAXaDA).
 
 ## 3. :outbox_tray: Extract object features 
 Inside the ```data``` folder, MSCOCO and PASCAL-VOC image datasets should be stored in appropriate formats, before running the following:
