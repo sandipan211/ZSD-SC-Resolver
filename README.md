@@ -1,3 +1,9 @@
+[![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/resolving-semantic-confusions-for-improved/zero-shot-object-detection-on-ms-coco)](https://paperswithcode.com/sota/zero-shot-object-detection-on-ms-coco?p=resolving-semantic-confusions-for-improved)
+
+[![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/resolving-semantic-confusions-for-improved/generalized-zero-shot-object-detection-on-ms)](https://paperswithcode.com/sota/generalized-zero-shot-object-detection-on-ms?p=resolving-semantic-confusions-for-improved)
+
+[![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/resolving-semantic-confusions-for-improved/zero-shot-object-detection-on-pascal-voc-07)](https://paperswithcode.com/sota/zero-shot-object-detection-on-pascal-voc-07?p=resolving-semantic-confusions-for-improved)
+
 # :computer: BMVC 2022 : Resolving Semantic Confusions for Improved Zero-Shot Detection
 
 ##  :eyeglasses: At a glance
