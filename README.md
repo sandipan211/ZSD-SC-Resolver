@@ -1,7 +1,7 @@
 # :computer: BMVC 2022 : Resolving Semantic Confusions for Improved Zero-Shot Detection
 
 ##  :eyeglasses: At a glance
-This repository contains the official PyTorch implementation of our [BMVC 2022](www.bmvc2022.org) paper : Resolving Semantic Confusions for Improved Zero-Shot Detection, a work done by Sandipan Sarma, Sushil Kumar and Arijit Sur at [Indian Institute of Technology Guwahati](https://www.iitg.ac.in/cse/). 
+This repository contains the official PyTorch implementation of our [BMVC 2022](www.bmvc2022.org) paper : [Resolving Semantic Confusions for Improved Zero-Shot Detection](https://bmvc2022.mpi-inf.mpg.de/0347.pdf), a work done by Sandipan Sarma, Sushil Kumar and Arijit Sur at [Indian Institute of Technology Guwahati](https://www.iitg.ac.in/cse/). 
 
 
 - Supervised deep learning-based object detection models like Faster-RCNN and YOLO have seen tremendous success in the last decade or so, but are limited by the availability of large-scale annotated datasets, failure to recognize the changing object appearances over time, and ability to detect unseen objects.
@@ -92,7 +92,18 @@ cd mmdetection
 
 **NOTE:** Change ```--zsd``` flag to ```---gzsd``` for evaluation in the **generalized ZSD setting**. Change directory names accordingly.
 
-
+# :gift: Citation
+If you use our work for your research, kindly consider citing our work using the following BibTex:
+```
+@inproceedings{Sarma_2022_BMVC,
+author    = {Sandipan Sarma and SUSHIL KUMAR and Arijit Sur},
+title     = {Resolving Semantic Confusions for Improved Zero-Shot Detection},
+booktitle = {33rd British Machine Vision Conference 2022, {BMVC} 2022, London, UK, November 21-24, 2022},
+publisher = {{BMVA} Press},
+year      = {2022},
+url       = {https://bmvc2022.mpi-inf.mpg.de/0347.pdf}
+}
+```
 
 
 # :scroll: References
