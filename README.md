@@ -29,6 +29,10 @@ This repository contains the official PyTorch implementation of our [BMVC 2022](
     <em>The primary novelty of our model lies in the incorporation of triplet loss based on visual features, assisted by a cyclic-consistency loss</em>
 </p>
 
+# :video_camera: Video
+This paper was [presented](https://youtu.be/9mIEhM8ksK0) at the **BMVC Orals, 2022**.
+
+
 # :bullettrain_side: Training the model
 
 ## 1. :office: Creating the work environment
