@@ -4,7 +4,7 @@
 
 [![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/resolving-semantic-confusions-for-improved/zero-shot-object-detection-on-pascal-voc-07)](https://paperswithcode.com/sota/zero-shot-object-detection-on-pascal-voc-07?p=resolving-semantic-confusions-for-improved)
 
-# :computer: BMVC 2022 : Resolving Semantic Confusions for Improved Zero-Shot Detection
+# :computer: Resolving Semantic Confusions for Improved Zero-Shot Detection (BMVC Oral Presentation, 2022)
 
 ##  :eyeglasses: At a glance
 This repository contains the official PyTorch implementation of our [BMVC 2022](www.bmvc2022.org) paper : [Resolving Semantic Confusions for Improved Zero-Shot Detection](https://bmvc2022.mpi-inf.mpg.de/0347.pdf), a work done by Sandipan Sarma, Sushil Kumar and Arijit Sur at [Indian Institute of Technology Guwahati](https://www.iitg.ac.in/cse/). 
