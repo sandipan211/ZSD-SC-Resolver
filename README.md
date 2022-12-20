@@ -1,8 +1,8 @@
-[![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/resolving-semantic-confusions-for-improved/zero-shot-object-detection-on-ms-coco)](https://paperswithcode.com/sota/zero-shot-object-detection-on-ms-coco?p=resolving-semantic-confusions-for-improved)
+[![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/resolving-semantic-confusions-for-improved-1/generalized-zero-shot-object-detection-on-ms)](https://paperswithcode.com/sota/generalized-zero-shot-object-detection-on-ms?p=resolving-semantic-confusions-for-improved-1)
 
-[![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/resolving-semantic-confusions-for-improved/generalized-zero-shot-object-detection-on-ms)](https://paperswithcode.com/sota/generalized-zero-shot-object-detection-on-ms?p=resolving-semantic-confusions-for-improved)
+[![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/resolving-semantic-confusions-for-improved-1/zero-shot-object-detection-on-ms-coco)](https://paperswithcode.com/sota/zero-shot-object-detection-on-ms-coco?p=resolving-semantic-confusions-for-improved-1)
 
-[![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/resolving-semantic-confusions-for-improved/zero-shot-object-detection-on-pascal-voc-07)](https://paperswithcode.com/sota/zero-shot-object-detection-on-pascal-voc-07?p=resolving-semantic-confusions-for-improved)
+[![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/resolving-semantic-confusions-for-improved-1/zero-shot-object-detection-on-pascal-voc-07)](https://paperswithcode.com/sota/zero-shot-object-detection-on-pascal-voc-07?p=resolving-semantic-confusions-for-improved-1)
 
 # Resolving Semantic Confusions for Improved Zero-Shot Detection (BMVC Oral Presentation, 2022)
 
@@ -103,7 +103,7 @@ cd mmdetection
 **NOTE:** Change ```--zsd``` flag to ```---gzsd``` for evaluation in the **generalized ZSD setting**. Change directory names accordingly.
 
 # :gift: Citation
-If you use our work for your research, kindly consider citing our work using the following BibTex:
+If you use our work for your research, kindly star :star: our repository and consider citing our work using the following BibTex:
 ```
 @inproceedings{Sarma_2022_BMVC,
 author    = {Sandipan Sarma and SUSHIL KUMAR and Arijit Sur},
