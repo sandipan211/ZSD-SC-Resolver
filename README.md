@@ -86,13 +86,13 @@ python train_regressor.py
 Weights will be saved in the appropriate paths. For VOC, run ```train_regressor_voc.py```
 
 
-## 4. :factory: Train the generative model using extracted features
+## 5. :factory: Train the generative model using extracted features
 Extracted seen-class object features constitute the *real data distribution*, using which a **Conditional Wasserstein GAN** is trained, with class-semantics of seen/unseen classes acting as the *conditional variables*. During GAN training, triplet loss is computed based on the synthesized object features, enforcing inter-class dissimilarity learning. Moreover, a cyclic-consistency between the synthesized features and their class semantics is computed, encourgaing the GAN to generate visual features that correspond well to their own semantics. For training the GAN, run the script:
 ```bash
 ./script/train_coco_generator_65_15.sh
 ```
 
-## 5. :mag: Evaluation
+## 6. :mag: Evaluation
 ```bash
 cd mmdetection
 
