@@ -100,7 +100,7 @@ cd mmdetection
 ./tools/dist_test.sh configs/faster_rcnn_r101_fpn_1x.py ./work_dirs/coco2014/epoch_12.pth 1 --dataset coco --out /workspace/arijit_ug/sushil/zsd/checkpoints/ab_st_final/coco_65_15_wgan_modeSeek_seen_cycSeenUnseen_tripletSeenUnseen_varMargin_try6/coco_65_15_wgan_modeSeek_seen_cycSeenUnseen_tripletSeenUnseen_varMargin_try6_zsd_result.pkl --zsd --syn_weights /workspace/arijit_ug/sushil/zsd/checkpoints/ab_st_final/coco_65_15_wgan_modeSeek_seen_cycSeenUnseen_tripletSeenUnseen_varMargin_try6/classifier_best_latest.pth
 ```
 
-**NOTE:** Change ```--zsd``` flag to ```---gzsd``` for evaluation in the **generalized ZSD setting**. Change directory names accordingly.
+**NOTE:** Change ```--zsd``` flag to ```---gzsd``` for evaluation in the **generalized ZSD setting**. Change directory names accordingly. The classifier weights required in the evaluation step are given for [VOC](https://github.com/sandipan211/ZSD-SC-Resolver/blob/main/VOC/classifier_best_latest.pth) and [MSCOCO](https://github.com/sandipan211/ZSD-SC-Resolver/blob/main/MSCOCO/classifier_best_latest.pth).
 
 # :gift: Citation
 If you use our work for your research, kindly star :star: our repository and consider citing our work using the following BibTex:
