@@ -161,7 +161,7 @@ cd mmdetection
       <br>
     </p>
 
-Log files are also uploaded for [ZSD]([url](https://github.com/sandipan211/ZSD-SC-Resolver/blob/main/results/coco_65_15_wgan_modeSeek_seen_cycSeenUnseen_tripletSeenUnseen_varMargin_try3_zsd_result_3dig.log)) and [GZSD]([url](https://github.com/sandipan211/ZSD-SC-Resolver/blob/main/results/coco_65_15_wgan_modeSeek_seen_cycSeenUnseen_tripletSeenUnseen_varMargin_try3_gzsd_result.log)).
+Log files are also uploaded for [ZSD](https://github.com/sandipan211/ZSD-SC-Resolver/blob/main/results/coco_65_15_wgan_modeSeek_seen_cycSeenUnseen_tripletSeenUnseen_varMargin_try3_zsd_result_3dig.log) and [GZSD](https://github.com/sandipan211/ZSD-SC-Resolver/blob/main/results/coco_65_15_wgan_modeSeek_seen_cycSeenUnseen_tripletSeenUnseen_varMargin_try3_gzsd_result.log).
 
 # :gift: Citation
 If you use our work for your research, kindly star :star: our repository and consider citing our work using the following BibTex:
