@@ -154,6 +154,13 @@ cd mmdetection
     | ContrastZSD |            62.90           |             58.60            |                60.70                |
     |   **Ours**  |            58.60           |           **64.00**          |              **61.18**              |
     
+- Results for PASCAL-VOC
+
+    <p align="center">
+      <img width="883" alt="pascal results" src="https://user-images.githubusercontent.com/30040548/234193175-72b233e7-ff0e-48b0-bb12-3661452089bb.png">
+      <br>
+    </p>
+
 Log files are also uploaded.
 
 # :gift: Citation
