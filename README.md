@@ -36,7 +36,7 @@ This paper was [presented](https://youtu.be/9mIEhM8ksK0) at the **BMVC Orals, 20
 # :bullettrain_side: Training the model
 
 ## 1. :office: Creating the work environment
-Our code is based on PyTorch and has been implemented using an NVIDIA DGX Station, with [mmdetection](https://github.com/open-mmlab/mmdetection) as the base framework for object detection, which contains a Faster-RCNN implementation. Install Anaconda/Miniconda on your system and create a conda environment using the following command:
+Our code is based on PyTorch and has been implemented using an NVIDIA V100 32 GB DGX Station, with [mmdetection](https://github.com/open-mmlab/mmdetection) as the base framework for object detection, which contains a Faster-RCNN implementation. Install Anaconda/Miniconda on your system and create a conda environment using the following command:
 
 ```bash
 conda env create -f zsd_environment.yml
