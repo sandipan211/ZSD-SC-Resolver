@@ -102,6 +102,20 @@ cd mmdetection
 
 **NOTE:** Change ```--zsd``` flag to ```---gzsd``` for evaluation in the **generalized ZSD setting**. Change directory names accordingly. The classifier weights required in the evaluation step are given for [VOC](https://github.com/sandipan211/ZSD-SC-Resolver/blob/main/VOC/classifier_best_latest.pth) and [MSCOCO](https://github.com/sandipan211/ZSD-SC-Resolver/blob/main/MSCOCO/classifier_best_latest.pth).
 
+## 7. ::trophy: Results
+
+- mAP for ZSD on MS-COCO
+
+    |  **Method** | **ZSD (mAP in %)** |
+    |:-----------:|:------------------:|
+    |      PL     |        12.40       |
+    |     BLC     |        14.70       |
+    |   ACS-ZSD   |        15.34       |
+    |    SUZOD    |        17.30       |
+    |    ZSDTR    |        13.20       |
+    | ContrastZSD |        18.60       |
+    |   **Ours**  |      **20.10**     |
+
 # :gift: Citation
 If you use our work for your research, kindly star :star: our repository and consider citing our work using the following BibTex:
 ```
