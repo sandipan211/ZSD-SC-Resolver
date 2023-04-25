@@ -115,6 +115,46 @@ cd mmdetection
     |    ZSDTR    |        13.20       |
     | ContrastZSD |        18.60       |
     |   **Ours**  |      **20.10**     |
+    
+- Recall@100 for ZSD on MS-COCO
+
+    |  **Method** | **ZSD (Recall@100 in %)** |
+    |:-----------:|:-------------------------:|
+    |      PL     |           37.72           |
+    |     BLC     |           54.68           |
+    |   ACS-ZSD   |           47.83           |
+    |    SUZOD    |           61.40           |
+    |    ZSDTR    |           60.30           |
+    | ContrastZSD |           59.50           |
+    |   **Ours**  |         **65.10**         |
+    
+    
+- mAP for GZSD on MS-COCO
+
+    |  **Method** | **Seen (mAP in %)** | **Unseen (mAP in %)** | **Harmonic Mean (mAP in %)** |
+    |:-----------:|:-------------------:|:---------------------:|:----------------------------:|
+    |      PL     |        34.07        |         12.40         |             18.18            |
+    |     BLC     |        36.00        |         13.10         |             19.20            |
+    |   ACS-ZSD   |          -          |           -           |               -              |
+    |    SUZOD    |        37.40        |         17.30         |             23.65            |
+    |    ZSDTR    |        40.55        |         13.22         |             20.16            |
+    | ContrastZSD |        40.20        |         16.50         |             23.40            |
+    |   **Ours**  |        37.40        |       **20.10**       |           **26.15**          |
+    
+    
+- Recall@100 for GZSD on MS-COCO
+
+    |  **Method** | **Seen (Recall@100 in %)** | **Unseen (Recall@100 in %)** | **Harmonic Mean (Recall@100 in %)** |
+    |:-----------:|:--------------------------:|:----------------------------:|:-----------------------------------:|
+    |      PL     |            36.38           |             37.16            |                36.76                |
+    |     BLC     |            56.39           |             51.65            |                53.92                |
+    |   ACS-ZSD   |              -             |               -              |                  -                  |
+    |    SUZOD    |            58.60           |             60.80            |                59.67                |
+    |    ZSDTR    |            69.12           |             59.45            |                61.12                |
+    | ContrastZSD |            62.90           |             58.60            |                60.70                |
+    |   **Ours**  |            58.60           |           **64.00**          |              **61.18**              |
+    
+Log files are also uploaded.
 
 # :gift: Citation
 If you use our work for your research, kindly star :star: our repository and consider citing our work using the following BibTex:
