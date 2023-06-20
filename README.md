@@ -29,6 +29,10 @@ This repository contains the official PyTorch implementation of our [BMVC 2022](
     <em>The primary novelty of our model lies in the incorporation of triplet loss based on visual features, assisted by a cyclic-consistency loss</em>
 </p>
 
+## :newspaper: News
+Uploaded [instructions](https://github.com/sandipan211/ZSD-SC-Resolver/issues/13#issuecomment-1598510805) for applying our method on custom datasets.
+
+
 # :video_camera: Video
 This paper was [presented](https://youtu.be/9mIEhM8ksK0) at the **BMVC Orals, 2022**.
 
@@ -162,6 +166,7 @@ cd mmdetection
     </p>
 
 Log files are also uploaded for [ZSD](https://github.com/sandipan211/ZSD-SC-Resolver/blob/main/results/coco_65_15_wgan_modeSeek_seen_cycSeenUnseen_tripletSeenUnseen_varMargin_try3_zsd_result_3dig.log) and [GZSD](https://github.com/sandipan211/ZSD-SC-Resolver/blob/main/results/coco_65_15_wgan_modeSeek_seen_cycSeenUnseen_tripletSeenUnseen_varMargin_try3_gzsd_result.log).
+
 
 # :gift: Citation
 If you use our work for your research, kindly star :star: our repository and consider citing our work using the following BibTex:
