@@ -34,9 +34,6 @@ pwd
 #training generator (step 3)
  #./script/train_coco_generator_65_15_1.sh
 
-#training unseen_classifier
-#    python train_unseen_classifier.py
-
 
  
 #./script/train_coco_generator_65_15_1.sh
