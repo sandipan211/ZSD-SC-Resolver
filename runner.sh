@@ -50,8 +50,6 @@ pwd
 # cd ..
 #./script/train_coco_generator_65_15.sh
 
-#training unseen_classifier
-#    python train_unseen_classifier.py
 
 # #step -4 (evaluation step)
 # cd mmdetection
