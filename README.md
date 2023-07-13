@@ -80,6 +80,7 @@ Inside the ```data``` folder, MSCOCO and PASCAL-VOC image datasets should be sto
 ```bash
 cd ./mmdetection
 python tools/zero_shot_utils.py configs/faster_rcnn_r101_fpn_1x.py --classes seen --load_from ./work_dirs/coco2014/epoch_12.pth --save_dir ./data --data_split train
+python tools/zero_shot_utils.py configs/faster_rcnn_r101_fpn_1x.py --classes unseen --load_from ./work_dirs/coco2014/epoch_12.pth --save_dir ./data --data_split test
 ```
 
 ## 4. :left_right_arrow: Training a visual-semantic mapper
