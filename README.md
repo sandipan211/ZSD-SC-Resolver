@@ -30,7 +30,8 @@ This repository contains the official PyTorch implementation of our [BMVC 2022](
 </p>
 
 ## :newspaper: News
-Uploaded [instructions](https://github.com/sandipan211/ZSD-SC-Resolver/issues/13#issuecomment-1598510805) for applying our method on custom datasets.
+- Uploaded [instructions](https://github.com/sandipan211/ZSD-SC-Resolver/issues/13#issuecomment-1598510805) for applying our method on custom datasets.
+- New [definitions](https://github.com/sandipan211/ZSD-SC-Resolver/blob/main/script/hyperparams.md) uploaded for explaining the script hyperparameters.
 
 
 # :video_camera: Video
