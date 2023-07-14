@@ -15,8 +15,8 @@ This file explains the hyperparameters to set in the scripts (definitions [here]
 - nepoch : total epochs to train
 - ngh : linear layer neurons for generator network (ablations can be done to check for possible effects of network strength by varying the number of neurons)
 - ndh : linear layer neurons for discriminator network (ablations can be done to check for possible effects of network strength by varying the number of neurons)
-- lambda1 : for the gradient penalty trick of Wasserstein GANs (default value taken from the original [NIPS 2017 paper](https://dl.acm.org/doi/pdf/10.5555/3295222.3295327)
-- critic_iter : number of critic (discriminator) iterations per generator iteration for  Wasserstein GANs (default value taken from the original [NIPS 2017 paper](https://dl.acm.org/doi/pdf/10.5555/3295222.3295327)
+- lambda1 : for the gradient penalty trick of Wasserstein GANs (default value taken from the original [NIPS 2017 paper](https://dl.acm.org/doi/pdf/10.5555/3295222.3295327))
+- critic_iter : number of critic (discriminator) iterations per generator iteration for  Wasserstein GANs (default value taken from the original [NIPS 2017 paper](https://dl.acm.org/doi/pdf/10.5555/3295222.3295327))
 - nz : dimension of the random noise vector
 - gan_epoch_budget : random pick subset of features to train GAN
 - lr : learning rate for training GAN
