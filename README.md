@@ -32,7 +32,7 @@ This repository contains the official PyTorch implementation of our [BMVC 2022](
 ## :newspaper: News
 - Uploaded [instructions](https://github.com/sandipan211/ZSD-SC-Resolver/issues/13#issuecomment-1598510805) for applying our method on custom datasets.
 - New [definitions](https://github.com/sandipan211/ZSD-SC-Resolver/blob/main/script/hyperparams.md) uploaded for explaining the script hyperparameters.
-- The configuration file for setting up the detection pipelines in the case of MS-COCO is  ```mmdetection/configs/faster_rcnn_r101_fpn_1x.py```. Always replace it with ```mmdetection/configs/pascal_voc/faster_rcnn_r101_fpn_1x_voc0712.py``` wherever you encounter any argument for the config path.
+- The configuration file for setting up the detection pipelines in the case of MS-COCO is  ```mmdetection/configs/faster_rcnn_r101_fpn_1x.py```. For PASCAL-VOC, always replace it with ```mmdetection/configs/pascal_voc/faster_rcnn_r101_fpn_1x_voc0712.py``` wherever you encounter any argument for the config path.
 
 
 # :video_camera: Video
