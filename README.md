@@ -33,6 +33,7 @@ This repository contains the official PyTorch implementation of our [BMVC 2022](
 - Uploaded [instructions](https://github.com/sandipan211/ZSD-SC-Resolver/issues/13#issuecomment-1598510805) for applying our method on custom datasets.
 - New [definitions](https://github.com/sandipan211/ZSD-SC-Resolver/blob/main/script/hyperparams.md) uploaded for explaining the script hyperparameters.
 - The configuration file for setting up the detection pipelines in the case of MS-COCO is  ```mmdetection/configs/faster_rcnn_r101_fpn_1x.py```. For PASCAL-VOC, always replace it with ```mmdetection/configs/pascal_voc/faster_rcnn_r101_fpn_1x_voc0712.py``` wherever you encounter any argument for the config path.
+- See step 6 for hard-coded arguments during evaluation.
 
 
 # :video_camera: Video
@@ -107,7 +108,9 @@ cd mmdetection
 ./tools/dist_test.sh configs/faster_rcnn_r101_fpn_1x.py ./work_dirs/coco2014/epoch_12.pth 1 --dataset coco --out /workspace/arijit_ug/sushil/zsd/checkpoints/ab_st_final/coco_65_15_wgan_modeSeek_seen_cycSeenUnseen_tripletSeenUnseen_varMargin_try6/coco_65_15_wgan_modeSeek_seen_cycSeenUnseen_tripletSeenUnseen_varMargin_try6_zsd_result.pkl --zsd --syn_weights /workspace/arijit_ug/sushil/zsd/checkpoints/ab_st_final/coco_65_15_wgan_modeSeek_seen_cycSeenUnseen_tripletSeenUnseen_varMargin_try6/classifier_best_latest.pth
 ```
 
-**NOTE:** Change ```--zsd``` flag to ```---gzsd``` for evaluation in the **generalized ZSD setting**. Change directory names accordingly. The classifier weights required in the evaluation step are given for [VOC](https://github.com/sandipan211/ZSD-SC-Resolver/blob/main/VOC/classifier_best_latest.pth) and [MSCOCO](https://github.com/sandipan211/ZSD-SC-Resolver/blob/main/MSCOCO/classifier_best_latest.pth).
+**NOTE:** Change ```--zsd``` flag to ```---gzsd``` for evaluation in the **generalized ZSD setting**. Change directory names accordingly. The classifier weights required in the evaluation step are given for [VOC](https://github.com/sandipan211/ZSD-SC-Resolver/blob/main/VOC/classifier_best_latest.pth) and [MSCOCO](https://github.com/sandipan211/ZSD-SC-Resolver/blob/main/MSCOCO/classifier_best_latest.pth). 
+
+**:sweat_smile: Hard-coded argument:** For GZSD evaluation, change the default 21 (for VOC) in [this](https://github.com/sandipan211/ZSD-SC-Resolver/blob/8acc4f40bff2b4e4c5e18523fee336e1f5b68759/mmdetection/mmdet/models/detectors/test_mixins.py#L67) line to 81 if you want to test with MSCOCO.
 
 ## 7. :trophy: Results
 
