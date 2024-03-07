@@ -12,7 +12,7 @@ from mmdet.apis.runner import copy_synthesised_weights
 from mmcv import Config
 
 config_file = 'configs/pascal_voc/faster_rcnn_r101_fpn_1x_voc0712_single_img.py'
-syn_weights = 'workspace/arijit_ug/sushil/zsd/checkpoints/voc/VOC_wgan_seen_cyclicSeenUnseen_triplet_varMar_try8/classifier_best_latest.pth'  # replace this with your best classifier file
+syn_weights = 'workspace/arijit_ug/sushil/zsd/checkpoints/voc/VOC_wgan_seen_cyclicSeenUnseen_triplet_varMar_try6/classifier_best_latest.pth'  # replace this with your best classifier file
 checkpoint_file =  './work_dirs/voc/epoch_4.pth' # retreive it from the given link and put in in apt folders
 score_thr = 0.4
 try:
