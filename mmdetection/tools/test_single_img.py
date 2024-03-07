@@ -152,7 +152,7 @@ def eval(result_file, dataset, iou_thr=0.5, dataset_name='voc', split='16_4'):
     return mean_ap, eval_results
     
 def load_rpn_conf_cls_weights(model):
-    wieghts_file_path = 'workspace/arijit_ug/sushil/zsd/checkpoints/voc/VOC_wgan_seen_cyclicSeenUnseen_triplet_varMar_try8/classifier_best_latest.pth'
+    wieghts_file_path = 'workspace/arijit_ug/sushil/zsd/checkpoints/voc/VOC_wgan_seen_cyclicSeenUnseen_triplet_varMar_try6/classifier_best_latest.pth'
     if hasattr(model, 'module'):
         own_state = model.module.state_dict()
     else:
